@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heavymachines.alwejhagroup.com/sitemap.xml
