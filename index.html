@@ -1,185 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Heavy Machinery Installation Services in Oman | Alwejha Group</title>
-  <meta name="description" content="Professional heavy machinery installation services across Oman. Alwejha Group ensures precision, safety, and reliability.">
-  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>Heavy Machinery Solutions in Oman | AL WEJHA GROUP - Equipment Rental & Operations</title>
+  <meta name="description" content="AL WEJHA GROUP: Oman's Premier Heavy Machinery Experts. Caterpillar & Komatsu Equipment Services in Muscat, Sohar & Salalah. Certified Machinery Operators & Maintenance.">
   <link rel="canonical" href="https://heavymachines.alwejhagroup.com/">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/webp" href="LOGO (1).webp">
-
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://heavymachines.alwejhagroup.com/">
-  <meta property="og:title" content="Heavy Machinery Installation Services in Oman | Alwejha Group">
-  <meta property="og:description" content="Professional heavy machinery installation services across Oman. Alwejha Group ensures precision, safety, and reliability.">
-  <meta property="og:image" content="https://heavymachines.alwejhagroup.com/LOGO%20(1).webp">
+  <meta property="og:title" content="Heavy Machinery Services in Oman | AL WEJHA GROUP Industrial Solutions">
+  <meta property="og:description" content="Certified Heavy Equipment Operations & Maintenance Across Oman - Bulldozers, Excavators & Cranes for Construction & Energy Sectors">
+  <meta property="og:image" content="https://heavymachines.alwejhagroup.com/heavymachines.webp">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://heavymachines.alwejhagroup.com/">
-  <meta property="twitter:title" content="Heavy Machinery Installation Services in Oman | Alwejha Group">
-  <meta property="twitter:description" content="Professional heavy machinery installation services across Oman. Alwejha Group ensures precision, safety, and reliability.">
-  <meta property="twitter:image" content="https://heavymachines.alwejhagroup.com/LOGO%20(1).webp">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Heavy Machinery Experts in Oman | AL WEJHA GROUP">
+  <meta name="twitter:description" content="Oman's Trusted Heavy Equipment Specialists - Industrial-Grade Machinery for Large-Scale Projects">
 
+  <!-- Inline Critical CSS -->
   <style>
-    /* Reset and Basics */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --industrial-black: #0a0a0f;
+      --safety-orange: #ff6b35;
+      --hazard-yellow: #ffd700;
+      --steel-gray: #5a5a5a;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      margin: 0;
       line-height: 1.6;
-      background: #ffffff;
+      color: #fff;
+      background: var(--industrial-black);
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header Section */
-    header {
-      background: url('heavy-machinery-installation.webp') no-repeat center center/cover;
-      height: 90vh;
+    .machinery-header {
+      background: linear-gradient(45deg, rgba(10,10,15,0.9), rgba(255,107,53,0.15)),
+                  url('heavymachines.webp') center/cover;
+      min-height: 80vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
       position: relative;
-      color: #fff;
+      border-bottom: 3px solid var(--safety-orange);
     }
-    header::after {
+    .machinery-header::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 2px,
+        rgba(255,107,53,0.1) 2px,
+        rgba(255,107,53,0.1) 4px
+      );
     }
-    header h1 {
-      font-size: 3rem;
-      z-index: 2;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 4rem 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
-
-    /* Navigation */
-    nav {
-      background: #003366;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-      font-size: 16px;
+    .machine-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 2rem;
+      border: 1px solid var(--steel-gray);
+      transition: all 0.3s;
+      position: relative;
+    }
+    .machine-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--safety-orange);
+    }
+    .sector-badge {
+      background: var(--hazard-yellow);
+      color: var(--industrial-black);
+      padding: 6px 15px;
+      border-radius: 15px;
+      margin: 1rem 0;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .industrial-nav {
       position: sticky;
       top: 0;
-      z-index: 10;
+      background: var(--industrial-black);
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border-bottom: 1px solid var(--steel-gray);
     }
-    nav a {
-      color: #ffffff;
+    .nav-flex {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
     }
-    nav a:hover {
-      color: #ffcc00;
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--safety-orange);
+      transform: scaleX(0);
+      transition: transform 0.3s;
     }
-
-    /* Sections */
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
+    .nav-link:hover::after {
+      transform: scaleX(1);
     }
-    section h2 {
-      color: #003366;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      text-align: center;
+    .heavy-cta {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: var(--industrial-black);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      z-index: 1000;
+      border-top: 1px solid var(--steel-gray);
     }
-    section p, section ul {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
+    .industrial-btn {
+      background: var(--safety-orange);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .industrial-btn:hover {
+      background: #ff5a1f;
+      box-shadow: 0 4px 12px rgba(255,107,53,0.3);
     }
-    ul li {
-      padding: 8px 0;
-    }
-
-    /* Footer */
-    footer {
-      background: #003366;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
+      .machinery-header { min-height: 60vh; }
+      .equipment-grid { grid-template-columns: 1fr; }
+      .heavy-cta { flex-wrap: wrap; gap: 1rem; }
     }
   </style>
 
+  <!-- Preload Hero Image -->
+  <link rel="preload" href="heavymachines.webp" as="image">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AL WEJHA GROUP Heavy Machinery",
+    "image": "heavymachines.webp",
+    "description": "Oman's leading heavy machinery service provider",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Oman",
+      "addressRegion": ["Muscat", "Sohar", "Salalah", "Duqm"]
+    },
+    "telephone": "+96879271055",
+    "email": "business@alwejhagroup.com",
+    "sameAs": ["https://www.alwejhagroup.com/"]
+  }
+  </script>
 </head>
 
 <body>
+  <header class="machinery-header">
+    <div>
+      <h1>Heavy Machinery Solutions in Oman</h1>
+      <p>Industrial-Grade Equipment for Large-Scale Projects</p>
+      <div style="margin-top: 2rem;">
+        <span class="sector-badge">Muscat Construction</span>
+        <span class="sector-badge">Sohar Industrial</span>
+        <span class="sector-badge">Salalah Logistics</span>
+      </div>
+    </div>
+  </header>
 
-<header>
-  <h1>Heavy Machinery Installation Services in Oman</h1>
-</header>
+  <nav class="industrial-nav">
+    <div class="nav-flex">
+      <a href="https://www.alwejhagroup.com/" class="nav-link">Home</a>
+      <a href="https://www.alwejhagroup.com/area-of-expertise" class="nav-link">Expertise</a>
+      <a href="https://www.alwejhagroup.com/our-services" class="nav-link">Services</a>
+      <a href="https://www.alwejhagroup.com/contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
 
-<nav>
-  <a href="https://www.alwejhagroup.com/">Home</a>
-  <a href="https://www.alwejhagroup.com/#expertise">Area of Expertise</a>
-  <a href="https://www.alwejhagroup.com/#services">Our Services</a>
-  <a href="https://www.alwejhagroup.com/#clients">Our Clients</a>
-  <a href="https://www.alwejhagroup.com/#contact">Contact</a>
-</nav>
+  <main>
+    <section class="equipment-grid">
+      <article class="machine-card">
+        <h2>Equipment Rental Services</h2>
+        <div class="sector-badge">CAT & Komatsu Fleet</div>
+        <ul style="margin-top: 1rem;">
+          <li>✓ Bulldozers & Excavators</li>
+          <li>✓ Mobile Cranes (50-500T)</li>
+          <li>✓ Loaders & Backhoes</li>
+          <li>✓ Certified Operators</li>
+        </ul>
+      </article>
 
-<section>
-  <h2>Area of Expertise</h2>
-  <p>At Alwejha Group, we specialize in heavy machinery installation, ensuring that industrial equipment is positioned, calibrated, and activated with precision. Our experienced team delivers excellence on every project site, helping Oman’s industries grow safely and efficiently.</p>
-</section>
+      <article class="machine-card">
+        <h2>Machinery Maintenance</h2>
+        <div class="sector-badge">OEM Standards</div>
+        <ul style="margin-top: 1rem;">
+          <li>✓ Preventive Maintenance</li>
+          <li>✓ Engine Overhauls</li>
+          <li>✓ Hydraulic Repairs</li>
+          <li>✓ 24/7 Field Support</li>
+        </ul>
+      </article>
 
-<section>
-  <h2>Our Services</h2>
-  <ul>
-    <li>Heavy Equipment Positioning and Alignment</li>
-    <li>Foundation and Structural Support Solutions</li>
-    <li>Industrial Machine Commissioning</li>
-    <li>On-site Testing & Load Balancing</li>
-    <li>24/7 Maintenance and After-installation Support</li>
-  </ul>
-</section>
+      <article class="machine-card">
+        <h2>Project Support</h2>
+        <div class="sector-badge">Turnkey Solutions</div>
+        <ul style="margin-top: 1rem;">
+          <li>✓ Site Preparation</li>
+          <li>✓ Earthmoving Services</li>
+          <li>✓ Material Handling</li>
+          <li>✓ Demolition Experts</li>
+        </ul>
+      </article>
+    </section>
 
-<section>
-  <h2>Our Clients</h2>
-  <p>We are trusted by Oman’s top industrial, construction, and energy companies. See our successful projects and client testimonials on our main website.</p>
-</section>
+    <section style="text-align: center; padding: 4rem 1rem; background: rgba(255,107,53,0.05);">
+      <h2>Oman-Wide Machinery Services</h2>
+      <div style="max-width: 1000px; margin: 2rem auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+          <div class="sector-badge" style="background: var(--steel-gray);">Muscat</div>
+          <div class="sector-badge" style="background: var(--steel-gray);">Sohar</div>
+          <div class="sector-badge" style="background: var(--steel-gray);">Salalah</div>
+          <div class="sector-badge" style="background: var(--steel-gray);">Duqm</div>
+          <div class="sector-badge" style="background: var(--steel-gray);">Nizwa</div>
+          <div class="sector-badge" style="background: var(--steel-gray);">Ibri</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section>
-  <h2>Contact Us</h2>
-  <p>Looking for heavy machine installation experts? <a href="https://www.alwejhagroup.com/#contact" style="color: #003366; font-weight: bold;">Get in touch</a> with us today!</p>
-</section>
+  <div class="heavy-cta">
+    <a href="https://wa.me/96879271055" class="industrial-btn" aria-label="WhatsApp Chat">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      WhatsApp
+    </a>
+    <a href="tel:+96879271055" class="industrial-btn" aria-label="Call Now">
+      📞 Call Now
+    </a>
+    <a href="mailto:business@alwejhagroup.com" class="industrial-btn" aria-label="Email Us">
+      ✉️ Email
+    </a>
+    <a href="https://www.alwejhagroup.com/" class="industrial-btn" style="background:var(--steel-gray);">
+      🏗️ New Site
+    </a>
+  </div>
 
-<footer>
-  &copy; 2025 Alwejha Group. All rights reserved.
-</footer>
+  <footer style="background: var(--industrial-black); color: #fff; padding: 2rem; text-align: center; border-top: 1px solid var(--steel-gray);">
+    <p>© 2025 AL WEJHA GROUP - Heavy Machinery Specialists</p>
+    <nav style="margin-top: 1rem;">
+      <a href="https://www.alwejhagroup.com/privacy" style="color: var(--safety-orange); margin: 0 1rem;">Privacy Policy</a>
+      <a href="https://www.alwejhagroup.com/certifications" style="color: var(--safety-orange); margin: 0 1rem;">Certifications</a>
+      <a href="https://www.alwejhagroup.com/projects" style="color: var(--safety-orange); margin: 0 1rem;">Project Portfolio</a>
+    </nav>
+  </footer>
 
+  <!-- Lazy Load Images -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => img.loading = 'lazy');
+    });
+  </script>
 </body>
 </html>
